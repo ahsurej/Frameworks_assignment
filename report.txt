@@ -1,0 +1,29 @@
+CORD-19 Analysis Report
+======================
+
+Part 1: Loading & Exploration
+- Loaded metadata.csv (sampled 10K rows for efficiency; full shape ~1M x 133).
+- Key insights: Title missing ~5%, abstract ~40%. publish_year is float (mean ~2020). 133 columns total.
+
+Part 2: Cleaning & Preparation
+- Dropped ~500 rows with no title. Filled publish_year with median (2020). Added abstract_word_count (mean 150 words).
+- High-missing columns (e.g., full_text >90%) ignored as metadata-focused.
+- Saved cleaned_metadata.csv (shape: ~9500 x 134).
+
+Part 3: Analysis & Viz
+- Papers by year: 2020 peak (~4500 in sample).
+- Top journals: medRxiv (preprints), SSRN, bioRxiv.
+- Top title words: covid, sars, coronavirus, study, patients.
+- Visualizations: Line plot shows 2020 surge; bar chart highlights preprint servers; word cloud emphasizes "COVID-19"; histogram shows skewed journal distribution.
+
+Part 4: Streamlit App
+- Interactive: Year slider filters data; journal dropdown shows counts.
+- Displays: Metrics, data tables, all 4 plots in tabs.
+- Run: streamlit run cord19_app.py – Responsive UI.
+
+Reflection & Challenges
+- Challenges: Large dataset (sampled to avoid memory issues); missing dates (used publish_year). Word cleaning simple (no advanced NLP).
+- Learning: Pandas for cleaning, Streamlit for quick apps, WordCloud for text viz. Improved data handling skills.
+- Improvements: Full dataset analysis, advanced NLP (e.g., TF-IDF), user auth in app.
+
+Total Time: ~8 hours (as estimated). Code is modular for reuse.
