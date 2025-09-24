@@ -1,8 +1,3 @@
-# cord19_app.py
-# Streamlit App for CORD-19 Explorer (Part 4)
-# Interactive dashboard with data views and visualizations.
-# Run AFTER analysis script: streamlit run cord19_app.py
-# Loads cleaned_metadata.csv and PNG files.
 
 import streamlit as st
 import pandas as pd
