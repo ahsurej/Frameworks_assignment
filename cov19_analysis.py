@@ -1,13 +1,5 @@
 
-# cord19_analysis.py
-# CORD-19 Dataset Analysis: Parts 1-3 (Data Loading, Cleaning, Analysis & Visualization)
-# This script loads metadata.csv, explores/cleans the data, performs analysis, and generates visualizations.
-# Run this FIRST: python cord19_analysis.py
-# Outputs: Console stats, cleaned_metadata.csv, and 4 PNG plots (pubs_over_time.png, top_journals.png, title_wordcloud.png, source_distribution.png)
-# Author: [Your Name] - Assignment Submission
-# Dataset: CORD-19 metadata.csv (place in same folder)
-
-import pandas as pd
+#import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from wordcloud import WordCloud
@@ -15,8 +7,8 @@ from collections import Counter
 import re
 import numpy as np
 
-# Set plot style for better visuals
-plt.style.use('default')  # Use 'seaborn' if available, else default
+
+plt.style.use('default')  
 sns.set_palette("husl")
 
 # =====================================
